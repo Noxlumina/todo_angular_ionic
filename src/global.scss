@@ -24,3 +24,84 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+:root {
+	--ion-background-color: #06144b;
+	--ion-background-color-rgb: 6,20,75;
+
+	--ion-text-color: #e3eee5;
+	--ion-text-color-rgb: 227,238,229;
+
+	--ion-color-step-50: #111f53;
+	--ion-color-step-100: #1c2a5a;
+	--ion-color-step-150: #273562;
+	--ion-color-step-200: #32406a;
+	--ion-color-step-250: #3d4b72;
+	--ion-color-step-300: #485579;
+	--ion-color-step-350: #536081;
+	--ion-color-step-400: #5e6b89;
+	--ion-color-step-450: #697690;
+	--ion-color-step-500: #758198;
+	--ion-color-step-550: #808ca0;
+	--ion-color-step-600: #8b97a7;
+	--ion-color-step-650: #96a2af;
+	--ion-color-step-700: #a1adb7;
+	--ion-color-step-750: #acb8bf;
+	--ion-color-step-800: #b7c2c6;
+	--ion-color-step-850: #c2cdce;
+	--ion-color-step-900: #cdd8d6;
+	--ion-color-step-950: #d8e3dd;
+}
+
+$grey_border_color: #d1d1d1;
+$grey_bg_color: #f5f5f5;
+
+*,
+html,
+body {
+  margin: 0;
+  font-family: "Helvetica", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.15;
+}
+
+ion-input, ion-textarea{
+    border: 1px solid $grey_border_color;
+    width: 100%;
+}
+
+
+#todo-items-placeholder{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.todo-item{
+    display: inline-block;
+    height: auto;
+    width: 250px;
+    margin: 20px;
+    padding: 10px;
+    background-color: $grey_bg_color;
+    border: 1px solid $grey_border_color;
+}
+
+.todo-item div{
+    padding: 10px;
+}
+
+.todo-item div:nth-child(3) ion-input{
+    width: auto;
+    margin: 0 10px;
+}
+
+.todo-item div:nth-child(3) ion-label{
+   color: #777;
+   display: flex;
+   flex-direction: row;
+   justify-content: left;
+   align-items: center;
+}

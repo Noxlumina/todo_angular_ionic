@@ -1,0 +1,22 @@
+<div style="text-align: center; margin-top: 20px">
+    <h2>Ajouter une nouvelle tâche </h2>
+    <ion-list class="todo-item">
+        <form #inputData="ngForm" (ngSubmit)="onSubmit(inputData.value)">
+            <ion-card>
+                <ion-card-header>
+                  <ion-card-title><ion-label>Titre</ion-label>
+                    <ion-input type="text" placeholder="Titre" name="title" ngModel></ion-input></ion-card-title>
+                </ion-card-header>
+              
+                <ion-card-content>
+                    <ion-label>Description</ion-label><ion-textarea rows="6" placeholder="Description de la tâche" name="task"
+                    ngModel></ion-textarea></ion-card-content>
+              
+                
+                        <ion-input type="hidden" name="id" [(ngModel)]="id"></ion-input>
+                        <ion-button type="submit" >Enregistrer</ion-button>
+                   
+              </ion-card>
+        </form>
+    </ion-list>
+</div>

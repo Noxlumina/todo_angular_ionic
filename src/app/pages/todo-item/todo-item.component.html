@@ -1,0 +1,22 @@
+<ion-list class="todo-item {{ todo?.completed === true? 'done' : ''}}" >
+   <form  #inputData="ngForm" (ngSubmit)="onEditSubmit(inputData.value)">
+    <ion-card>
+        <ion-card-header>
+          <ion-card-title><ion-label>Titre</ion-label>
+            <ion-input type="text" placeholder="Title" name="title" ngModel={{todo?.title}} disabled="{{todo?.completed === true}}"></ion-input></ion-card-title>
+        </ion-card-header>
+      
+        <ion-card-content>
+            <ion-label>Description</ion-label><ion-textarea rows="6" placeholder="Enter task description" name="task" ngModel="{{todo?.task}}"  disabled="{{todo?.completed  === true}}"></ion-textarea></ion-card-content>
+      
+            <div>
+                <ion-label>Déjà faite <input id="checkbox" type="checkbox" name="completed"  [checked]="todo?.completed" (change)="toggleComplete(todo)"></ion-label>
+            </div>
+            <div>
+                <input type="hidden" name="id"  ngModel={{todo?.id}}>
+                <input type="hidden" name="completed"  ngModel={{todo?.completed}}>
+                <ion-button type="submit" style="float: right;"  *ngIf="!todo?.completed  === true" >Enregistrer</ion-button>  <ion-button color="danger" style="float: left;" (click)="toggleDelete(todo?.id)">X</ion-button>
+            </div>
+      </ion-card>
+   </form>
+</ion-list>
